@@ -6,6 +6,7 @@ import 'package:get/state_manager.dart';
 class LoginView extends GetView<AuthController> {
   const LoginView({super.key});
 
+  @override
   Widget build(BuildContext context) {
     final usernameController = TextEditingController();
     final passwordController = TextEditingController();
