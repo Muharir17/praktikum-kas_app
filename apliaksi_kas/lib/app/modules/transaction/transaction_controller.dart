@@ -22,7 +22,7 @@ class TransactionController extends GetxController {
   Future<void> fetchTransactions() async {
     isLoading.value = true;
     try {
-      await Future.delayed(Duration(seconds: 800));
+      await Future.delayed(const Duration(seconds: 800));
       transactions.value = _generateDummyTransactions();
     } catch (e) {
       debugPrint('Gagal Mengambil Data Transaksi: $e');
@@ -40,7 +40,7 @@ class TransactionController extends GetxController {
 
   Future<void> fetchSummary() async {
     try {
-      await Future.delayed(Duration(seconds: 500));
+      await Future.delayed(const Duration(seconds: 500));
       final summary = _calculateSummaryFromTransactions(transactions);
       totalIncome.value = summary['icome'] ?? 0.0;
       totalExpense.value = summary['expense'] ?? 0.0;

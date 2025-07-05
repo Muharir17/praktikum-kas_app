@@ -41,7 +41,7 @@ class HomeView extends GetView<HomeController> {
         ],
       ),
       body: RefreshIndicator(
-        onRefresh: controller.refreshData,
+        onRefresh: controller.RefreshData,
         child: Column(
           children: [
             SummaryCard(controller: transactionController),
@@ -74,9 +74,9 @@ class HomeView extends GetView<HomeController> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => _showAddTransactionModal(context),
-        child: const Icon(Icons.add),
         backgroundColor: Theme.of(context).colorScheme.primary,
         elevation: 4,
+        child: const Icon(Icons.add),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
